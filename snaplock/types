@@ -1,0 +1,65 @@
+
+from typing import Any, Dict, List, Optional, Set, Tuple, Union
+
+# Core types
+SnaplockConfig = Dict[str, Any]
+SnaplockRules = List[Dict[str, Any]]
+SnaplockState = Dict[str, Any]
+
+# File related types
+FilePath = str
+FileContent = str
+FileMetadata = Dict[str, Any]
+
+# Lock types
+LockId = str
+LockInfo = Dict[str, Any]
+LockStatus = str
+
+# Rule types
+RuleId = str
+RuleDefinition = Dict[str, Any]
+RuleResult = Tuple[bool, Optional[str]]
+
+# Event types
+EventType = str
+EventData = Dict[str, Any]
+EventHandler = Any
+
+# Permission types
+Permission = str
+PermissionSet = Set[Permission]
+UserPermissions = Dict[str, PermissionSet]
+
+# Status types
+StatusCode = int
+StatusMessage = str
+OperationResult = Tuple[StatusCode, StatusMessage]
+
+# Cache types
+CacheKey = str
+CacheValue = Any
+CacheEntry = Tuple[CacheKey, CacheValue]
+
+# Validation types
+ValidationRule = Dict[str, Any]
+ValidationResult = Tuple[bool, List[str]]
+
+# Configuration types
+ConfigKey = str
+ConfigValue = Union[str, int, bool, List[Any], Dict[str, Any]]
+ConfigMap = Dict[ConfigKey, ConfigValue]
+
+# Plugin types
+PluginId = str
+PluginConfig = Dict[str, Any]
+PluginInstance = Any
+
+# Callback types
+CallbackFunction = Any
+CallbackRegistry = Dict[str, List[CallbackFunction]]
+
+# Error types
+ErrorCode = int
+ErrorDetails = Dict[str, Any]
+ErrorResult = Tuple[ErrorCode, str, Optional[ErrorDetails]]
